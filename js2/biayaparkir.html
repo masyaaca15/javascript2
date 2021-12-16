@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>biaya parkir</title>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <label for="jamparkir">Jam Parkir</label>
+    <input id="jamparkir" type="number" />
+
+    <button onclick="hitungjamparkir()">cetak</button>
+
+    <label for="biayaparkir">Biaya Parkir</label>
+    <input id="biayaparkir" type="number" />
+
+    <script>
+        function hitungjamparkir() {
+            const jamparkir = document.getElementById('jamparkir');
+            const biayaparkir = document.getElementById('biayaparkir');
+
+            if (jamparkir.value == 2){
+                biayaparkir.value = 3000;
+            } else if (jamparkir.value > 2) {
+                biayaparkir.value = jamparkir.value * 1000 + 1000;
+            }
+        }
+    </script>
+</body>
+</html>
